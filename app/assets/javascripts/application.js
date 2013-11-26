@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require jquery-ui.custom.min
 //= require fullcalendar.min
-//= require jquery.fancybox
 //= require_tree .
 //= calendario
