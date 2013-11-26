@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= fullcalendar.print
+ *= fullcalendar
+ *= jquery.fancybox
+ *= require_tree .
+ */
+body {
+		margin-top: 40px;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+
+
+
+.calendar {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.calendar h1 {
+	
+	text-align:center;
+}
+
+.box-color{
+	
+	overflow: hidden;
+}
+
+.box-color div{
+	
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 5px;
+	
+}
+
+.blue{
+	
+	background: #00008B;
+	
+}
+
+.red{
+	
+	background: #FF0000;
+}
+
+.coral{
+	
+	background: #FF7F50;
+}
+
+.green {
+	
+	background: #7CFC00;
+}
+
+.gold{
+	
+	background: #FFD700;
+}
+

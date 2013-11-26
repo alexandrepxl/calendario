@@ -1,0 +1,56 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+  
+    <h3>Título</h3>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <h3>Início</h3>
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <h3>Fim</h3>
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="box-color">
+  	   <h3>Cor do evento</h3>	
+  	  <div class="blue">
+  		  <%= f.radio_button :color, "DarkBlue", :value => "DarkBlue", :checked => true %>
+  	  </div>
+      <div class="red">
+  		  <%= f.radio_button :color, "red", :value => "red" %>
+      </div>
+      <div class="coral">
+    	  <%= f.radio_button :color, "coral", :value => "coral" %>
+      </div>
+      <div class="green">
+    	  <%= f.radio_button :color, "LawnGreen", :value => "LawnGreen" %>
+      </div>
+      <div class="gold">
+    	  <%= f.radio_button :color, "Gold", :value => "Gold" %>
+      </div>
+  </div>
+  <div class="field">
+    <h3>Dia inteiro</h3>
+    <%= f.check_box :allDay %>
+  </div>
+  <div class="field">
+    <h3>Descrição</h3>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
